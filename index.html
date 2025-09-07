@@ -1,0 +1,1631 @@
+<!doctype html>
+<html lang="tr"> 
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Profesyonel TikTok Sosyal Medya Hizmetleri - Hesabınızı Büyütün</title> 
+  <meta name="description" content="TikTok hesabınız için hızlı ve güvenli takipçi, beğeni ve görüntüleme paketleri. Gerçek kullanıcılarla organik büyüme sağlayın ve fenomen olun."> 
+  <meta name="keywords" content="TikTok, TikTok takipçi, TikTok beğeni, TikTok görüntüleme, sosyal medya, sosyal medya hizmetleri, TikTok paketi, organik büyüme, fenomen olma"> 
+  <meta name="author" content="Geliştirilmiş TikTok Sitesi"> 
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;family=Poppins:wght@300;400;600;700&amp;display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9I+43yS3p0iE9D5A0zT7+qB5sQ5vY4Q5D44T5g5r5j5x5" crossorigin="anonymous" referrerpolicy="no-referrer"> 
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script> 
+  <style>
+        /* --- CSS Değişkenleri --- */
+        :root {
+            --tiktok-pink: #FE2C55; /* TikTok'un ana rengi */
+            --tiktok-cyan: #25F4EE; /* TikTok'un ikincil rengi */
+            --primary-color: var(--tiktok-pink);
+            --secondary-color: var(--tiktok-cyan);
+            --accent-color: #00f260; /* Yeşil tonlarında yeni vurgu rengi */
+            
+            --light-bg: #f8f9fa; /* Açık tema arka plan rengi */
+            --light-card-bg: #ffffff;
+            --light-text: #212529;
+            --light-text-secondary: #6c757d;
+            --light-border: #e9ecef;
+
+            --dark-bg: #121212;
+            --dark-card-bg: #1e1e1e;
+            --dark-text: #e9ecef;
+            --dark-text-secondary: #adb5bd;
+            --dark-border: #343a40;
+            
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            --border-radius: 16px;
+            --transition-speed: 0.4s;
+            --font-family-primary: 'Poppins', sans-serif;
+            --font-family-secondary: 'Montserrat', sans-serif;
+        }
+
+        /* --- Tema Ayarları ve Genel Sıfırlamalar --- */
+        body.dark-mode {
+            --bg-color: var(--dark-bg);
+            --card-bg-color: var(--dark-card-bg);
+            --text-color: var(--dark-text);
+            --text-secondary-color: var(--dark-text-secondary);
+            --border-color: var(--dark-border);
+            --input-bg: #2a2a2a;
+        }
+
+        body {
+            --bg-color: var(--light-bg);
+            --card-bg-color: var(--light-card-bg);
+            --text-color: var(--light-text);
+            --text-secondary-color: var(--light-text-secondary);
+            --border-color: var(--light-border);
+            --input-bg: #ffffff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth; /* Yumuşak kaydırma efekti */
+        }
+        
+        body {
+            font-family: var(--font-family-primary);
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: background-color var(--transition-speed), color var(--transition-speed);
+            line-height: 1.7;
+            font-size: 16px;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: var(--font-family-secondary);
+            font-weight: 700;
+            color: var(--text-color);
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: var(--secondary-color);
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 768px;
+            width: 100%;
+            background-color: var(--card-bg-color);
+            padding: clamp(30px, 5vw, 50px);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            transition: background-color var(--transition-speed);
+            position: relative;
+            margin-bottom: 40px;
+        }
+        
+        section {
+            margin-bottom: 50px;
+        }
+        
+        hr {
+            border: 0;
+            border-top: 1px solid var(--border-color);
+            margin: 40px 0;
+        }
+
+        /* --- Üst Kontroller ve Navigasyon --- */
+        .top-controls {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            z-index: 100;
+        }
+        
+        .lang-switcher button {
+            background-color: transparent;
+            border: 1px solid var(--border-color);
+            color: var(--text-color);
+            padding: 8px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+        }
+        
+        .lang-switcher button.active {
+            background-color: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+        
+        .lang-switcher button:hover:not(.active) {
+            background-color: rgba(0,0,0,0.05);
+        }
+        
+        body.dark-mode .lang-switcher button:hover:not(.active) {
+            background-color: rgba(255,255,255,0.05);
+        }
+        
+        .theme-switcher {
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: var(--text-color);
+            transition: color 0.3s, transform 0.3s;
+        }
+        
+        .theme-switcher:hover {
+            color: var(--secondary-color);
+            transform: rotate(15deg) scale(1.1);
+        }
+
+        /* --- Header Bölümü --- */
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header .tiktok-logo {
+            font-size: clamp(2.5rem, 6vw, 3.5rem);
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            animation: bounceIn 1s ease-out;
+        }
+
+        .header h1 {
+            font-size: clamp(2.2rem, 6vw, 3.2rem);
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
+            color: var(--text-secondary-color);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* --- Yeni Animasyonlar --- */
+        @keyframes bounceIn {
+            0% { transform: scale(0.1); opacity: 0; }
+            60% { transform: scale(1.2); opacity: 1; }
+            100% { transform: scale(1); }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-in-element {
+            animation: fadeIn 1s ease-out forwards;
+            opacity: 0;
+        }
+        
+        /* --- Form Bölümü --- */
+        .form-group {
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+            font-size: 1rem;
+            color: var(--text-color);
+            transition: color 0.2s;
+        }
+
+        .form-group input, 
+        .form-group select {
+            width: 100%;
+            padding: 16px;
+            border: 2px solid var(--border-color);
+            border-radius: 12px;
+            background-color: var(--input-bg);
+            color: var(--text-color);
+            font-size: 1.1rem;
+            transition: border-color var(--transition-speed), box-shadow var(--transition-speed), background-color var(--transition-speed);
+        }
+
+        .form-group input:focus, 
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 4px rgba(var(--primary-color-rgb), 0.2);
+        }
+        
+        .form-group .error-message {
+            color: #d9534f;
+            font-size: 0.85rem;
+            margin-top: 8px;
+            display: none;
+        }
+
+        .form-group input.invalid, 
+        .form-group select.invalid {
+            border-color: #d9534f !important;
+            box-shadow: 0 0 0 4px rgba(217, 83, 79, 0.2) !important;
+        }
+
+        .password-warning {
+            color: #d9534f;
+            background-color: rgba(217, 83, 79, 0.1);
+            border: 1px solid rgba(217, 83, 79, 0.2);
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .consent-group {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+        }
+        
+        .consent-group input[type="checkbox"] {
+            width: auto;
+            margin-right: 15px;
+            transform: scale(1.3);
+            flex-shrink: 0;
+            margin-top: 4px;
+        }
+
+        .consent-group label {
+            font-size: 0.95rem;
+            color: var(--text-secondary-color);
+            line-height: 1.5;
+        }
+
+        #submit-btn {
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            border: none;
+            border-radius: 12px;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        #submit-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300%;
+            height: 300%;
+            background: rgba(255, 255, 255, 0.15);
+            transition: all 0.7s ease;
+            transform: translate(-50%, -50%) rotate(45deg);
+            opacity: 0;
+        }
+        
+        #submit-btn:hover::before {
+            opacity: 1;
+            transform: translate(-50%, -50%) rotate(0deg);
+        }
+
+        #submit-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+        }
+
+        #submit-btn:disabled {
+            background: #aaa;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+            opacity: 0.8;
+        }
+
+        .spinner {
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-top: 4px solid #fff;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            animation: spin 1s linear infinite;
+            margin-right: 12px;
+            display: none;
+        }
+        
+        #submit-btn.loading .spinner {
+            display: inline-block;
+        }
+        
+        #submit-btn.loading span {
+            display: none;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        #order-summary {
+            background-color: rgba(37, 244, 238, 0.1);
+            border-left: 5px solid var(--secondary-color);
+            padding: 20px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            display: none;
+            color: var(--text-color);
+            font-family: var(--font-family-secondary);
+        }
+        
+        #order-summary p {
+            margin: 0;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #order-summary .price {
+            font-weight: 700;
+            color: var(--primary-color);
+            font-size: 1.2em;
+        }
+
+        /* --- Başarı Bildirimi --- */
+        #success-notification {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.9);
+            background-color: var(--card-bg-color);
+            padding: 50px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.5s, transform 0.5s, visibility 0.5s;
+            max-width: 400px;
+            width: 90%;
+        }
+        
+        #success-notification.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translate(-50%, -50%) scale(1);
+        }
+        
+        #success-notification .icon-success {
+            color: var(--secondary-color);
+            font-size: 4rem;
+            margin-bottom: 25px;
+            animation: bounce 1s ease-out;
+        }
+        
+        #success-notification h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        #success-notification p {
+            color: var(--text-color);
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-30px); }
+            60% { transform: translateY(-15px); }
+        }
+        
+        /* --- Genel Bölüm Başlıkları --- */
+        .section-title {
+            text-align: center;
+            font-size: clamp(2rem, 5vw, 2.8rem);
+            margin-bottom: 40px;
+            font-weight: 800;
+            color: var(--primary-color);
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background-color: var(--secondary-color);
+            border-radius: 2px;
+        }
+        
+        /* --- Yeni Hizmetlerimiz Bölümü --- */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .service-item {
+            background-color: var(--input-bg);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            border: 1px solid var(--border-color);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease-out;
+        }
+
+        .service-item:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .service-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+
+        .service-item .icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+        
+        .service-item:hover .icon {
+            transform: scale(1.1);
+        }
+
+        .service-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+            color: var(--text-color);
+        }
+        
+        .service-item p {
+            font-size: 1rem;
+            color: var(--text-secondary-color);
+            line-height: 1.6;
+        }
+
+        /* --- Nasıl Çalışır Bölümü --- */
+        .how-it-works .step {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            gap: 25px;
+            animation: fadeIn 0.8s ease-out forwards;
+            opacity: 0;
+        }
+        
+        .how-it-works .step:nth-child(1) { animation-delay: 0.1s; }
+        .how-it-works .step:nth-child(2) { animation-delay: 0.3s; }
+        .how-it-works .step:nth-child(3) { animation-delay: 0.5s; }
+        .how-it-works .step:nth-child(4) { animation-delay: 0.7s; }
+        .how-it-works .step:nth-child(5) { animation-delay: 0.9s; }
+        
+        .how-it-works .step-icon {
+            font-size: clamp(2rem, 5vw, 3rem);
+            color: var(--secondary-color);
+            flex-shrink: 0;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            background-color: rgba(37, 244, 238, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .how-it-works .step:hover .step-icon {
+            transform: scale(1.1) rotate(10deg);
+        }
+        
+        .how-it-works .step-content h3 {
+            font-size: clamp(1.2rem, 3vw, 1.5rem);
+            margin-bottom: 5px;
+            color: var(--text-color);
+        }
+        
+        .how-it-works .step-content p {
+            font-size: clamp(0.9rem, 2vw, 1rem);
+            color: var(--text-secondary-color);
+        }
+        
+        /* --- Hizmet Garantileri Bölümü --- */
+        .guarantees-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            text-align: center;
+        }
+        
+        .guarantee-item {
+            background-color: var(--input-bg);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            border: 1px solid var(--border-color);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: background-color 0.2s;
+        }
+
+        .guarantee-item:hover {
+            background-color: var(--bg-color);
+        }
+        
+        .guarantee-item .icon {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+        
+        .guarantee-item h4 {
+            font-size: 1.2rem;
+            color: var(--text-color);
+            margin-bottom: 10px;
+        }
+        
+        .guarantee-item p {
+            font-size: 0.95rem;
+            color: var(--text-secondary-color);
+        }
+
+        /* --- Yorumlar Bölümü --- */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+        }
+        
+        @media (min-width: 768px) {
+            .testimonials-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        .testimonial-item {
+            background-color: var(--input-bg);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            border: 1px solid var(--border-color);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .testimonial-item p {
+            font-style: italic;
+            margin-bottom: 20px;
+            line-height: 1.6;
+            color: var(--text-color);
+            font-size: clamp(0.9rem, 2vw, 1.1rem);
+        }
+
+        .testimonial-item strong {
+            display: block;
+            text-align: right;
+            color: var(--primary-color);
+            font-size: clamp(0.85rem, 1.8vw, 1rem);
+            font-weight: 700;
+        }
+
+        /* --- Güven Rozetleri Bölümü --- */
+        .trust-badges-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            text-align: center;
+            gap: 30px;
+        }
+        
+        .trust-badge-item {
+            flex: 1 1 150px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .trust-badge-item .icon {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+            transition: transform 0.3s ease-out;
+        }
+        
+        .trust-badge-item:hover .icon {
+            transform: translateY(-8px) scale(1.1);
+        }
+        
+        .trust-badge-item p {
+            font-weight: 600;
+            font-size: clamp(0.9rem, 2vw, 1rem);
+            color: var(--text-color);
+        }
+
+        /* --- Sıkça Sorulan Sorular (FAQ) Bölümü --- */
+        .faq-item {
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: clamp(1rem, 2.2vw, 1.2rem);
+            color: var(--text-color);
+            transition: color 0.2s;
+        }
+        
+        .faq-question:hover {
+            color: var(--primary-color);
+        }
+
+        .faq-question .toggle-icon {
+            font-size: 1.3rem;
+            transition: transform 0.3s;
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+            padding: 0 20px;
+            font-size: clamp(0.9rem, 1.8vw, 1rem);
+            line-height: 1.7;
+            color: var(--text-secondary-color);
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding-bottom: 20px;
+        }
+        
+        .faq-item.active .toggle-icon {
+            transform: rotate(180deg);
+        }
+
+        /* --- Hemen Başla Bölümü --- */
+        .cta-section {
+            text-align: center;
+            padding: clamp(40px, 8vw, 60px);
+            background: linear-gradient(45deg, var(--tiktok-pink), var(--tiktok-cyan));
+            border-radius: var(--border-radius);
+            color: white;
+            margin-top: 40px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;charset=UTF-8,<svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><g fill="%23ffffff" fill-opacity="0.1"><path d="M0 0h20v20H0z" /><path d="M11 0L0 11V0h11zm3 0L0 14V0h14zm3 0L0 17V0h17zm3 0L0 20h20V0zm0 3L3 20h17V3zm0 3L6 20h14V6zm0 3L9 20h11V9zm0 3L12 20h8v-8zm0 3l-3 5h8v-5zm0 3l-6 2h6v-2z" /></g></svg>');
+            opacity: 0.15;
+            z-index: 1;
+        }
+
+        .cta-section > * {
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-section h2 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            margin-bottom: 20px;
+            font-weight: 800;
+            color: white;
+        }
+        
+        .cta-section p {
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
+            margin-bottom: 30px;
+            line-height: 1.5;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .cta-section .cta-button {
+            display: inline-block;
+            background-color: white;
+            color: var(--primary-color);
+            padding: 18px 35px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .cta-section .cta-button:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        /* --- Footer --- */
+        .footer {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--text-secondary-color);
+            padding-bottom: 30px;
+            width: 100%;
+            max-width: 768px;
+            border-top: 1px solid var(--border-color);
+            padding-top: 30px;
+        }
+
+        .footer a {
+            color: var(--primary-color);
+            margin: 0 15px;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+        
+        .footer a:hover {
+            color: var(--secondary-color);
+        }
+
+        .footer .social-links a {
+            font-size: 1.5rem;
+            margin: 0 10px;
+        }
+        
+        /* --- Yukarı Çık Butonu --- */
+        #scroll-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 55px;
+            height: 55px;
+            font-size: 1.6rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+            transform: translateY(20px);
+            z-index: 999;
+        }
+        
+        #scroll-to-top.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        #scroll-to-top:hover {
+            transform: translateY(-5px) scale(1.1);
+        }
+        
+        /* --- Duyarlı Ayarlamalar --- */
+        @media (max-width: 768px) {
+            .container {
+                padding: 25px;
+                border-radius: 12px;
+            }
+            .top-controls {
+                position: static;
+                justify-content: center;
+                margin-bottom: 20px;
+                flex-wrap: wrap;
+            }
+            .how-it-works .step {
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+            }
+            .how-it-works .step-icon {
+                margin-bottom: 15px;
+            }
+        }
+    </style> 
+ </head> 
+ <body> 
+  <nav class="main-nav"> 
+   <ul> 
+    <li><a href="#form-section">Hizmetler</a></li> 
+    <li><a href="#guarantees-section">Neden Biz?</a></li> 
+    <li><a href="#testimonials-section">Yorumlar</a></li> 
+    <li><a href="#faq-section">SSS</a></li> 
+    <li><a href="#contact-section">İletişim</a></li> 
+   </ul> 
+  </nav> 
+  <div class="top-controls"> 
+   <div class="lang-switcher"> <button id="btn-tr" class="active">TR</button> <button id="btn-en">EN</button> 
+   </div> 
+   <div class="theme-switcher" id="theme-toggle" aria-label="Temayı Değiştir">
+    🌙
+   </div> 
+  </div> 
+  <main class="main-content"> 
+   <section id="header-section" class="container"> 
+    <div class="header"> <i class="fab fa-tiktok tiktok-logo" aria-hidden="true"></i> 
+     <h1 data-lang="title">TikTok Sosyal Medya Hizmetleri</h1> 
+     <p data-lang="subtitle">TikTok hesabınızı organik ve hızlı bir şekilde büyütün! En güvenilir ve en hızlı hizmetlerle popülerliğinizi artırın.</p> 
+    </div> 
+    <div class="trust-badges-grid"> 
+     <div class="trust-badge-item fade-in-element" style="--animation-delay: 0.2s;"> <i class="fas fa-users icon" aria-hidden="true"></i> 
+      <p data-lang="badge1">Gerçek Kullanıcılar</p> 
+     </div> 
+     <div class="trust-badge-item fade-in-element" style="--animation-delay: 0.4s;"> <i class="fas fa-shield-alt icon" aria-hidden="true"></i> 
+      <p data-lang="badge2">Gizlilik Garantisi</p> 
+     </div> 
+     <div class="trust-badge-item fade-in-element" style="--animation-delay: 0.6s;"> <i class="fas fa-bolt icon" aria-hidden="true"></i> 
+      <p data-lang="badge3">Anında Başlangıç</p> 
+     </div> 
+     <div class="trust-badge-item fade-in-element" style="--animation-delay: 0.8s;"> <i class="fas fa-headset icon" aria-hidden="true"></i> 
+      <p data-lang="badge4">7/24 Destek</p> 
+     </div> 
+    </div> 
+   </section> 
+   <hr> 
+   <section id="form-section" class="container"> 
+    <h2 class="section-title" data-lang="formTitle">TikTok Paketleri</h2> 
+    <form id="tiktok-form" novalidate autocomplete="on"> 
+     <div class="form-group"> <label for="full-name" data-lang="fullName">Ad Soyad</label> 
+      <input type="text" id="full-name" name="full_name" required placeholder="Adınız Soyadınız"> <span class="error-message" data-lang="fullNameError">Lütfen adınızı ve soyadınızı girin.</span> 
+     </div> 
+     <div class="form-group"> <label for="tiktok-username" data-lang="tiktokUsername">TikTok Kullanıcı Adı</label> 
+      <input type="text" id="tiktok-username" name="tiktok_username" required minlength="3" placeholder="tiktokkullaniciadiniz"> <span class="error-message" data-lang="tiktokUsernameError">Lütfen geçerli bir TikTok kullanıcı adı girin (min. 3 karakter).</span> 
+     </div> 
+     <div class="form-group"> 
+      <div class="password-warning" data-lang="passwordWarning">
+       ⚠️ TikTok bilgilerinizi yanlış yazarsanız işlem gerçekleşmez. Lütfen doğru ve eksiksiz bilgileri girdiğinizden emin olun.
+      </div> <label for="tiktok-password" data-lang="tiktokPassword">TikTok Hesap Şifresi</label> 
+      <input type="password" id="tiktok-password" name="tiktok_password" required minlength="6" placeholder="Şifreniz (En az 6 karakter)"> <span class="error-message" data-lang="passwordError">Lütfen TikTok şifrenizi girin (min. 6 karakter).</span> 
+     </div> 
+     <div class="form-group"> <label for="email" data-lang="email">E-posta Adresi</label> 
+      <input type="email" id="email" name="email" required placeholder="ornek@mail.com"> <span class="error-message" data-lang="emailError">Lütfen geçerli bir e-posta adresi girin.</span> 
+     </div> 
+     <div class="form-group"> <label for="package-type" data-lang="packageSelection">Paket Seçimi</label> <select id="package-type" name="package_type" required> <option value="" data-lang="selectPackage">-- Bir Paket Seçin --</option> <optgroup data-lang="freePackagesGroup" label="Ücretsiz Paketler"> <option value="ücretsiz-50-takipci" data-lang="freeFollowers">50 Takipçi</option> <option value="ücretsiz-20-begeni" data-lang="freeLikes">20 Beğeni</option> <option value="ücretsiz-100-görüntüleme" data-lang="freeViews">100 Görüntüleme</option> </optgroup> <optgroup data-lang="paidPackagesGroup" label="Ücretli Paketler"> <option value="1000-takipci-50tl" data-price="50">1000 Takipçi – 50TL</option> <option value="5000-takipci-220tl" data-price="220">5000 Takipçi - 220TL</option> <option value="5000-begeni-200tl" data-price="200">5000 Beğeni – 200TL</option> <option value="25000-begeni-850tl" data-price="850">25000 Beğeni - 850TL</option> <option value="10000-görüntüleme-370tl" data-price="370">10.000 Görüntüleme – 370TL</option> <option value="50000-görüntüleme-1500tl" data-price="1500">50.000 Görüntüleme - 1500TL</option> <option value="premium-paket-3000tl" data-price="3000">Premium Paket (10k Takipçi, 50k Beğeni, 100k Görüntüleme) - 3000TL</option> </optgroup> </select> <span class="error-message" data-lang="packageError">Lütfen bir paket seçin.</span> 
+     </div> 
+     <div id="order-summary" class="fade-in-element"></div> 
+     <div class="consent-group"> 
+      <input type="checkbox" id="consent" name="consent" required> <label for="consent" data-lang="consentCheckbox">Yukarıdaki tüm bilgileri kendi isteğimle verdiğimi, bu hizmeti gönüllü olarak talep ettiğimi ve <a href="#terms-section">hizmet şartlarını</a> okuyup kabul ettiğimi onaylıyorum.</label> <span class="error-message" data-lang="consentError" style="display:none; margin-top: 5px;">Hizmet şartlarını kabul etmelisiniz.</span> 
+     </div> <button type="submit" id="submit-btn" data-lang="submitButton" aria-label="Talep Gönder"> <span class="spinner" role="status" aria-hidden="true"></span> <span>Talep Gönder</span> </button> 
+    </form> 
+   </section> 
+   <hr> 
+   <section id="about-us-section" class="container"> 
+    <h2 class="section-title" data-lang="aboutUsTitle">Hakkımızda</h2> 
+    <div class="about-content"> 
+     <p data-lang="aboutUsDesc1">Biz, TikTok fenomen adaylarının ve içerik üreticilerinin platformdaki potansiyellerini en üst düzeye çıkarmalarına yardımcı olan profesyonel bir sosyal medya hizmetleri sağlayıcısıyız. Yıllardır edindiğimiz tecrübe ile, TikTok'un hızla değişen algoritmalarına uyum sağlayan ve gerçek sonuçlar getiren çözümler sunuyoruz. Amacımız, müşterilerimizin markalarını ve kişisel hesaplarını organik, güvenli ve kalıcı yöntemlerle büyütmektir.</p> 
+     <p data-lang="aboutUsDesc2">Sektördeki en güvenilir altyapılardan birini kullanarak, hesaplarınızın güvenliğini her zaman en üst seviyede tutuyoruz. Sunduğumuz tüm hizmetler, yapay zeka destekli sistemler tarafından yönetilerek, doğal ve organik bir büyüme süreci sağlamaktadır. Sadece takipçi, beğeni veya görüntüleme satmak yerine, sizinle birlikte bir büyüme stratejisi oluşturuyor ve TikTok'ta kalıcı bir yer edinmenize yardımcı oluyoruz. Müşteri memnuniyeti bizim için her zaman birinci önceliktir ve bu yüzden 7/24 destek ekibimizle her an yanınızdayız.</p> 
+    </div> 
+   </section> 
+   <section id="services-section" class="container"> 
+    <h2 class="section-title" data-lang="servicesTitle">Hizmetlerimiz</h2> 
+    <p class="text-center" data-lang="servicesSubtitle">Hedeflerinize ulaşmanız için tasarlanmış kapsamlı TikTok hizmetleri.</p> 
+    <div class="services-grid"> 
+     <div class="service-item fade-in-element" style="--animation-delay: 0.1s;"> <i class="fas fa-user-plus icon" aria-hidden="true"></i> 
+      <h3 data-lang="service1Title">TikTok Takipçi</h3> 
+      <p data-lang="service1Desc">Hesabınıza organik ve gerçek kullanıcılardan takipçiler kazandırarak profilinizi büyütün. Hızla fenomen olma yolunda ilerleyin.</p> 
+     </div> 
+     <div class="service-item fade-in-element" style="--animation-delay: 0.3s;"> <i class="fas fa-heart icon" aria-hidden="true"></i> 
+      <h3 data-lang="service2Title">TikTok Beğeni</h3> 
+      <p data-lang="service2Desc">Paylaştığınız videoların daha fazla etkileşim almasını sağlayarak keşfete düşme ihtimalinizi artırın. Beğenilerle içeriğinizin kalitesini kanıtlayın.</p> 
+     </div> 
+     <div class="service-item fade-in-element" style="--animation-delay: 0.5s;"> <i class="fas fa-eye icon" aria-hidden="true"></i> 
+      <h3 data-lang="service3Title">TikTok Görüntüleme</h3> 
+      <p data-lang="service3Desc">Videolarınızın izlenme sayısını artırarak algoritmaların dikkatini çekin. Popüler videolarınızla daha geniş kitlelere ulaşın.</p> 
+     </div> 
+     <div class="service-item fade-in-element" style="--animation-delay: 0.7s;"> <i class="fas fa-comment-dots icon" aria-hidden="true"></i> 
+      <h3 data-lang="service4Title">TikTok Yorum</h3> 
+      <p data-lang="service4Desc">Videolarınıza özel, olumlu ve ilgili yorumlar ekleyerek etkileşimi en üst seviyeye taşıyın ve topluluk oluşturun.</p> 
+     </div> 
+     <div class="service-item fade-in-element" style="--animation-delay: 0.9s;"> <i class="fas fa-share-alt icon" aria-hidden="true"></i> 
+      <h3 data-lang="service5Title">TikTok Paylaşım</h3> 
+      <p data-lang="service5Desc">Videolarınızın daha fazla kişi tarafından paylaşılmasını sağlayarak viral olma şansınızı artırın ve doğal bir yayılma elde edin.</p> 
+     </div> 
+     <div class="service-item fade-in-element" style="--animation-delay: 1.1s;"> <i class="fas fa-rocket icon" aria-hidden="true"></i> 
+      <h3 data-lang="service6Title">Özel Paketler</h3> 
+      <p data-lang="service6Desc">İhtiyaçlarınıza özel olarak tasarlanmış, takipçi, beğeni, yorum ve görüntüleme hizmetlerini bir arada sunan avantajlı paketler.</p> 
+     </div> 
+    </div> 
+   </section> 
+   <hr> 
+   <section id="how-it-works-section" class="container"> 
+    <h2 class="section-title" data-lang="howItWorksTitle">Nasıl Çalışır?</h2> 
+    <div class="how-it-works"> 
+     <div class="step fade-in-element"> <i class="fas fa-list-check step-icon" aria-hidden="true"></i> 
+      <div class="step-content"> 
+       <h3 data-lang="step1Title">1. Paket Seçimi</h3> 
+       <p data-lang="step1Desc">İhtiyaçlarınıza en uygun takipçi, beğeni veya görüntüleme paketini seçin.</p> 
+      </div> 
+     </div> 
+     <div class="step fade-in-element"> <i class="fas fa-user-edit step-icon" aria-hidden="true"></i> 
+      <div class="step-content"> 
+       <h3 data-lang="step2Title">2. Hesap Bilgilerini Girin</h3> 
+       <p data-lang="step2Desc">Formdaki ilgili alanlara TikTok kullanıcı adınızı ve diğer gerekli bilgileri girin. Şifre bilgisi asla saklanmaz.</p> 
+      </div> 
+     </div> 
+     <div class="step fade-in-element"> <i class="fas fa-paper-plane step-icon" aria-hidden="true"></i> 
+      <div class="step-content"> 
+       <h3 data-lang="step3Title">3. Talebi Gönderin</h3> 
+       <p data-lang="step3Desc">Bilgileri kontrol ettikten sonra "Talep Gönder" butonuna tıklayarak siparişinizi bize ulaştırın.</p> 
+      </div> 
+     </div> 
+     <div class="step fade-in-element"> <i class="fas fa-play-circle step-icon" aria-hidden="true"></i> 
+      <div class="step-content"> 
+       <h3 data-lang="step4Title">4. İşlemi Başlatıyoruz</h3> 
+       <p data-lang="step4Desc">Talebiniz bize ulaştıktan sonra, sistemimiz otomatik olarak ve anında hizmetinizi başlatır.</p> 
+      </div> 
+     </div> 
+     <div class="step fade-in-element"> <i class="fas fa-chart-line step-icon" aria-hidden="true"></i> 
+      <div class="step-content"> 
+       <h3 data-lang="step5Title">5. Büyümeyi İzleyin</h3> 
+       <p data-lang="step5Desc">Hizmetin tamamlanmasının ardından, hesabınızdaki takipçi, beğeni veya görüntüleme artışını gözlemleyin.</p> 
+      </div> 
+     </div> 
+    </div> 
+   </section> 
+   <hr> 
+   <section id="guarantees-section" class="container"> 
+    <h2 class="section-title" data-lang="guaranteesTitle">Neden Bizi Seçmelisiniz?</h2> 
+    <p class="text-center" data-lang="guaranteesSubtitle">Güvenliğiniz ve memnuniyetiniz bizim için her şeyden önce gelir.</p> 
+    <div class="guarantees-grid"> 
+     <div class="guarantee-item fade-in-element" style="--animation-delay: 0.2s;"> <i class="fas fa-shield-alt icon" aria-hidden="true"></i> 
+      <h4 data-lang="guarantee1Title">Hesap Güvenliği</h4> 
+      <p data-lang="guarantee1Desc">Şifreniz hiçbir şekilde saklanmaz veya üçüncü taraflarla paylaşılmaz. Hesabınız tamamen güvendedir.</p> 
+     </div> 
+     <div class="guarantee-item fade-in-element" style="--animation-delay: 0.4s;"> <i class="fas fa-tachometer-alt icon" aria-hidden="true"></i> 
+      <h4 data-lang="guarantee2Title">Hızlı ve Etkili</h4> 
+      <p data-lang="guarantee2Desc">Siparişiniz anında işleme alınır ve en kısa sürede tamamlanır. Hızdan ödün vermeyiz.</p> 
+     </div> 
+     <div class="guarantee-item fade-in-element" style="--animation-delay: 0.6s;"> <i class="fas fa-handshake icon" aria-hidden="true"></i> 
+      <h4 data-lang="guarantee3Title">Organik Büyüme</h4> 
+      <p data-lang="guarantee3Desc">Hizmetlerimiz, tamamen gerçek ve aktif kullanıcılardan oluşur. Hesabınızın doğal büyümesine yardımcı olur.</p> 
+     </div> 
+     <div class="guarantee-item fade-in-element" style="--animation-delay: 0.8s;"> <i class="fas fa-headset icon" aria-hidden="true"></i> 
+      <h4 data-lang="guarantee4Title">7/24 Canlı Destek</h4> 
+      <p data-lang="guarantee4Desc">Herhangi bir sorunuz veya sorununuz olursa, 7 gün 24 saat canlı destek ekibimizle iletişime geçebilirsiniz.</p> 
+     </div> 
+    </div> 
+   </section> 
+   <hr> 
+   <section id="testimonials-section" class="container"> 
+    <h2 class="section-title" data-lang="testimonialsTitle">Müşteri Yorumları</h2> 
+    <p class="text-center" data-lang="testimonialsSubtitle">Memnun müşterilerimizin söyledikleri.</p> 
+    <div class="testimonials-grid"> 
+     <div class="testimonial-item fade-in-element" style="--animation-delay: 0.2s;"> <i class="fas fa-quote-left icon" aria-hidden="true"></i> 
+      <p data-lang="testimonial1">"Gerçekten harika bir hizmet! Sipariş verdiğim andan itibaren 10 dakika içinde takipçilerim gelmeye başladı ve hepsi gerçek hesaplar. TikTok hesabım ilk defa bu kadar hızlı büyüdü. Teşekkürler!"</p> <strong data-lang="testimonial1Author">- Ahmet K.</strong> 
+     </div> 
+     <div class="testimonial-item fade-in-element" style="--animation-delay: 0.4s;"> <i class="fas fa-quote-left icon" aria-hidden="true"></i> 
+      <p data-lang="testimonial2">"Daha önce başka sitelerden de hizmet almıştım ama hiçbiri bu kadar güvenilir değildi. Şifremi istemedikleri için çok rahat ettim. Görüntüleme paketleri sayesinde videolarım daha çok kişiye ulaştı. Kesinlikle tavsiye ederim."</p> <strong data-lang="testimonial2Author">- Elif D.</strong> 
+     </div> 
+     <div class="testimonial-item fade-in-element" style="--animation-delay: 0.6s;"> <i class="fas fa-quote-left icon" aria-hidden="true"></i> 
+      <p data-lang="testimonial3">"Hesabım resmen canlandı! Beğeni paketi satın aldım ve videolarımın etkileşimi inanılmaz arttı. Artık daha fazla içerik üretme motivasyonum var. Hızlı ve güvenli bir şekilde hizmet almak isteyenler için doğru adres."</p> <strong data-lang="testimonial3Author">- Caner M.</strong> 
+     </div> 
+     <div class="testimonial-item fade-in-element" style="--animation-delay: 0.8s;"> <i class="fas fa-quote-left icon" aria-hidden="true"></i> 
+      <p data-lang="testimonial4">"Sürekli takipçilerimin düştüğünü fark ediyordum, ama buranın hizmeti çok kalıcı oldu. Gerçek kullanıcılar olduğu için etkileşimim de yükseldi. Müşteri hizmetleri de çok ilgili, her soruma anında cevap verdiler."</p> <strong data-lang="testimonial4Author">- Zeynep B.</strong> 
+     </div> 
+    </div> 
+   </section> 
+   <hr> 
+   <section id="faq-section" class="container"> 
+    <h2 class="section-title" data-lang="faqTitle">Sıkça Sorulan Sorular</h2> 
+    <div class="faq-accordion"> 
+     <div class="faq-item fade-in-element" style="--animation-delay: 0.2s;"> 
+      <div class="faq-question" data-lang="faq1Q"> <span>Hizmetleriniz güvenli mi? Hesabım çalınır mı?</span> <i class="fas fa-chevron-down toggle-icon"></i> 
+      </div> 
+      <div class="faq-answer" data-lang="faq1A"> 
+       <p>Evet, tüm hizmetlerimiz son derece güvenlidir. İşlemler sırasında hesabınızın şifresini istemiyoruz. Yalnızca kullanıcı adınızla işlem yapmaktayız. Bu sayede hesabınızın güvenliği her zaman korunur. TikTok'un API kurallarına uygun hareket ediyoruz ve hiçbir güvenlik riski oluşturmuyoruz.</p> 
+      </div> 
+     </div> 
+     <div class="faq-item fade-in-element" style="--animation-delay: 0.4s;"> 
+      <div class="faq-question" data-lang="faq2Q"> <span>Sipariş verdiğim hizmet ne kadar sürede tamamlanır?</span> <i class="fas fa-chevron-down toggle-icon"></i> 
+      </div> 
+      <div class="faq-answer" data-lang="faq2A"> 
+       <p>Siparişiniz sistemimize ulaştığı andan itibaren otomatik olarak işleme alınır. Genellikle takipçi, beğeni ve görüntüleme hizmetleri anında başlar ve paketin büyüklüğüne göre 5 dakika ile 2 saat arasında tamamlanır. Çok büyük paketlerde bu süre biraz uzayabilir ancak her zaman en kısa sürede tamamlanması hedeflenir.</p> 
+      </div> 
+     </div> 
+     <div class="faq-item fade-in-element" style="--animation-delay: 0.6s;"> 
+      <div class="faq-question" data-lang="faq3Q"> <span>Takipçiler gerçek mi yoksa bot mu?</span> <i class="fas fa-chevron-down toggle-icon"></i> 
+      </div> 
+      <div class="faq-answer" data-lang="faq3A"> 
+       <p>Sunduğumuz tüm hizmetler, gerçek ve aktif TikTok kullanıcılarından oluşmaktadır. Bot hesaplar kullanmıyoruz. Bu sayede hesabınız organik bir şekilde büyür, etkileşim oranlarınız yükselir ve TikTok algoritmasının dikkatini çekme olasılığınız artar.</p> 
+      </div> 
+     </div> 
+     <div class="faq-item fade-in-element" style="--animation-delay: 0.8s;"> 
+      <div class="faq-question" data-lang="faq4Q"> <span>Yanlış kullanıcı adı girersem ne olur?</span> <i class="fas fa-chevron-down toggle-icon"></i> 
+      </div> 
+      <div class="faq-answer" data-lang="faq4A"> 
+       <p>Eğer yanlış bir kullanıcı adı girerseniz, sistemimiz işlemi başlatamayacaktır. Bu durumda size bir hata bildirimi gönderilir ve bilgileri tekrar girmeniz istenir. Yanlış girilen bilgilerle başka bir hesaba işlem yapılması mümkün değildir. Lütfen kullanıcı adınızı dikkatli bir şekilde kontrol ediniz.</p> 
+      </div> 
+     </div> 
+     <div class="faq-item fade-in-element" style="--animation-delay: 1.0s;"> 
+      <div class="faq-question" data-lang="faq5Q"> <span>Ödemeyi nasıl yapabilirim?</span> <i class="fas fa-chevron-down toggle-icon"></i> 
+      </div> 
+      <div class="faq-answer" data-lang="faq5A"> 
+       <p>Şu an için form üzerinden sadece ücretsiz paket talepleri alıyoruz. İlerleyen zamanlarda kredi kartı, havale/EFT gibi çeşitli güvenli ödeme yöntemlerini entegre etmeyi planlıyoruz. Ücretli paketler için lütfen canlı destek ekibimizle iletişime geçin.</p> 
+      </div> 
+     </div> 
+    </div> 
+   </section> 
+   <section id="cta-section" class="container cta-section fade-in-element"> 
+    <h2 data-lang="ctaTitle">Hemen Başlayın ve Farkı Hissedin!</h2> 
+    <p data-lang="ctaSubtitle">TikTok hesabınızı bizimle birlikte profesyonelce büyütün. İlk adımı atmak için formu doldurun.</p> <a href="#form-section" class="cta-button" data-lang="ctaButton">Paketleri İncele</a> 
+   </section> 
+  </main> 
+  <footer class="footer"> 
+   <div class="social-links"> <a href="#" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a> <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a> <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a> <a href="#" target="_blank" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a> 
+   </div> 
+   <p data-lang="copyright">© 2024 TikTok Sosyal Medya Hizmetleri. Tüm hakları saklıdır.</p> 
+   <div> <a href="#terms-section" data-lang="footerTerms">Hizmet Şartları</a> | <a href="#privacy-section" data-lang="footerPrivacy">Gizlilik Politikası</a> 
+   </div> 
+  </footer> <button id="scroll-to-top" title="Yukarı Çık" aria-label="Yukarı Çık"> <i class="fas fa-chevron-up"></i> </button> 
+  <div id="success-notification" role="alert" aria-live="polite"> <i class="fas fa-check-circle icon-success"></i> 
+   <h2 data-lang="successTitle">Teşekkürler!</h2> 
+   <p data-lang="successMessage">Talebiniz başarıyla alınmıştır. İşleminiz en kısa sürede başlatılacaktır. Bizi tercih ettiğiniz için teşekkür ederiz.</p> 
+  </div> 
+  <script>
+        // --- Form Alanları ---
+        const form = document.getElementById('tiktok-form');
+        const submitBtn = document.getElementById('submit-btn');
+        const packageType = document.getElementById('package-type');
+        const orderSummary = document.getElementById('order-summary');
+        const successNotification = document.getElementById('success-notification');
+        const consentCheckbox = document.getElementById('consent');
+        
+        // --- Dil Değişkenleri ---
+        const translations = {
+            tr: {
+                title: "TikTok Sosyal Medya Hizmetleri",
+                subtitle: "TikTok hesabınızı organik ve hızlı bir şekilde büyütün! En güvenilir ve en hızlı hizmetlerle popülerliğinizi artırın.",
+                badge1: "Gerçek Kullanıcılar",
+                badge2: "Gizlilik Garantisi",
+                badge3: "Anında Başlangıç",
+                badge4: "7/24 Destek",
+                formTitle: "TikTok Paketleri",
+                fullName: "Ad Soyad",
+                fullNameError: "Lütfen adınızı ve soyadınızı girin.",
+                tiktokUsername: "TikTok Kullanıcı Adı",
+                tiktokUsernameError: "Lütfen geçerli bir TikTok kullanıcı adı girin (min. 3 karakter).",
+                passwordWarning: "⚠️ TikTok şifrenizi yanlış yazarsanız işlem gerçekleşmez. Lütfen doğru ve eksiksiz bilgileri girdiğinizden emin olun.",
+                tiktokPassword: "TikTok Hesap Şifresi",
+                passwordError: "Lütfen TikTok şifrenizi girin (min. 6 karakter).",
+                email: "E-posta Adresi",
+                emailError: "Lütfen geçerli bir e-posta adresi girin.",
+                packageSelection: "Paket Seçimi",
+                selectPackage: "-- Bir Paket Seçin --",
+                freePackagesGroup: "Ücretsiz Paketler",
+                freeFollowers: "50 Takipçi",
+                freeLikes: "20 Beğeni",
+                freeViews: "100 Görüntüleme",
+                paidPackagesGroup: "Ücretli Paketler",
+                consentCheckbox: "Yukarıdaki tüm bilgileri kendi isteğimle verdiğimi, bu hizmeti gönüllü olarak talep ettiğimi ve <a href=\"#terms-section\">hizmet şartlarını</a> okuyup kabul ettiğimi onaylıyorum.",
+                consentError: "Hizmet şartlarını kabul etmelisiniz.",
+                submitButton: "Talep Gönder",
+                orderSummaryTitle: "Sipariş Özeti",
+                orderSummaryPackage: "Seçilen Paket:",
+                orderSummaryPrice: "Toplam Fiyat:",
+                aboutUsTitle: "Hakkımızda",
+                aboutUsDesc1: "Biz, TikTok fenomen adaylarının ve içerik üreticilerinin platformdaki potansiyellerini en üst düzeye çıkarmalarına yardımcı olan profesyonel bir sosyal medya hizmetleri sağlayıcısıyız. Yıllardır edindiğimiz tecrübe ile, TikTok'un hızla değişen algoritmalarına uyum sağlayan ve gerçek sonuçlar getiren çözümler sunuyoruz. Amacımız, müşterilerimizin markalarını ve kişisel hesaplarını organik, güvenli ve kalıcı yöntemlerle büyütmektir.",
+                aboutUsDesc2: "Sektördeki en güvenilir altyapılardan birini kullanarak, hesaplarınızın güvenliğini her zaman en üst seviyede tutuyoruz. Sunduğumuz tüm hizmetler, yapay zeka destekli sistemler tarafından yönetilerek, doğal ve organik bir büyüme süreci sağlamaktadır. Sadece takipçi, beğeni veya görüntüleme satmak yerine, sizinle birlikte bir büyüme stratejisi oluşturuyor ve TikTok'ta kalıcı bir yer edinmenize yardımcı oluyoruz. Müşteri memnuniyeti bizim için her zaman birinci önceliktir ve bu yüzden 7/24 destek ekibimizle her an yanınızdayız.",
+                servicesTitle: "Hizmetlerimiz",
+                servicesSubtitle: "Hedeflerinize ulaşmanız için tasarlanmış kapsamlı TikTok hizmetleri.",
+                service1Title: "TikTok Takipçi",
+                service1Desc: "Hesabınıza organik ve gerçek kullanıcılardan takipçiler kazandırarak profilinizi büyütün. Hızla fenomen olma yolunda ilerleyin.",
+                service2Title: "TikTok Beğeni",
+                service2Desc: "Paylaştığınız videoların daha fazla etkileşim almasını sağlayarak keşfete düşme ihtimalinizi artırın. Beğenilerle içeriğinizin kalitesini kanıtlayın.",
+                service3Title: "TikTok Görüntüleme",
+                service3Desc: "Videolarınızın izlenme sayısını artırarak algoritmaların dikkatini çekin. Popüler videolarınızla daha geniş kitlelere ulaşın.",
+                service4Title: "TikTok Yorum",
+                service4Desc: "Videolarınıza özel, olumlu ve ilgili yorumlar ekleyerek etkileşimi en üst seviyeye taşıyın ve topluluk oluşturun.",
+                service5Title: "TikTok Paylaşım",
+                service5Desc: "Videolarınızın daha fazla kişi tarafından paylaşılmasını sağlayarak viral olma şansınızı artırın ve doğal bir yayılma elde edin.",
+                service6Title: "Özel Paketler",
+                service6Desc: "İhtiyaçlarınıza özel olarak tasarlanmış, takipçi, beğeni, yorum ve görüntüleme hizmetlerini bir arada sunan avantajlı paketler.",
+                howItWorksTitle: "Nasıl Çalışır?",
+                step1Title: "1. Paket Seçimi",
+                step1Desc: "İhtiyaçlarınıza en uygun takipçi, beğeni veya görüntüleme paketini seçin.",
+                step2Title: "2. Hesap Bilgilerini Girin",
+                step2Desc: "Formdaki ilgili alanlara TikTok kullanıcı adınızı ve diğer gerekli bilgileri girin. Şifre bilgisi asla saklanmaz.",
+                step3Title: "3. Talebi Gönderin",
+                step3Desc: "Bilgileri kontrol ettikten sonra 'Talep Gönder' butonuna tıklayarak siparişinizi bize ulaştırın.",
+                step4Title: "4. İşlemi Başlatıyoruz",
+                step4Desc: "Talebiniz bize ulaştıktan sonra, sistemimiz otomatik olarak ve anında hizmetinizi başlatır.",
+                step5Title: "5. Büyümeyi İzleyin",
+                step5Desc: "Hizmetin tamamlanmasının ardından, hesabınızdaki takipçi, beğeni veya görüntüleme artışını gözlemleyin.",
+                guaranteesTitle: "Neden Bizi Seçmelisiniz?",
+                guaranteesSubtitle: "Güvenliğiniz ve memnuniyetiniz bizim için her şeyden önce gelir.",
+                guarantee1Title: "Hesap Güvenliği",
+                guarantee1Desc: "Şifreniz hiçbir şekilde saklanmaz veya üçüncü taraflarla paylaşılmaz. Hesabınız tamamen güvendedir.",
+                guarantee2Title: "Hızlı ve Etkili",
+                guarantee2Desc: "Siparişiniz anında işleme alınır ve en kısa sürede tamamlanır. Hızdan ödün vermeyiz.",
+                guarantee3Title: "Organik Büyüme",
+                guarantee3Desc: "Hizmetlerimiz, tamamen gerçek ve aktif kullanıcılardan oluşur. Hesabınızın doğal büyümesine yardımcı olur.",
+                guarantee4Title: "7/24 Canlı Destek",
+                guarantee4Desc: "Herhangi bir sorunuz veya sorununuz olursa, 7 gün 24 saat canlı destek ekibimizle iletişime geçebilirsiniz.",
+                testimonialsTitle: "Müşteri Yorumları",
+                testimonialsSubtitle: "Memnun müşterilerimizin söyledikleri.",
+                testimonial1: '"Gerçekten harika bir hizmet! Sipariş verdiğim andan itibaren 10 dakika içinde takipçilerim gelmeye başladı ve hepsi gerçek hesaplar. TikTok hesabım ilk defa bu kadar hızlı büyüdü. Teşekkürler!"',
+                testimonial1Author: "- Ahmet K.",
+                testimonial2: '"Daha önce başka sitelerden de hizmet almıştım ama hiçbiri bu kadar güvenilir değildi. Şifremi istemedikleri için çok rahat ettim. Görüntüleme paketleri sayesinde videolarım daha çok kişiye ulaştı. Kesinlikle tavsiye ederim."',
+                testimonial2Author: "- Elif D.",
+                testimonial3: '"Hesabım resmen canlandı! Beğeni paketi satın aldım ve videolarımın etkileşimi inanılmaz arttı. Artık daha fazla içerik üretme motivasyonum var. Hızlı ve güvenli bir şekilde hizmet almak isteyenler için doğru adres."',
+                testimonial3Author: "- Caner M.",
+                testimonial4: '"Sürekli takipçilerimin düştüğünü fark ediyordum, ama buranın hizmeti çok kalıcı oldu. Gerçek kullanıcılar olduğu için etkileşimim de yükseldi. Müşteri hizmetleri de çok ilgili, her soruma anında cevap verdiler."',
+                testimonial4Author: "- Zeynep B.",
+                faqTitle: "Sıkça Sorulan Sorular",
+                faq1Q: "Hizmetleriniz güvenli mi? Hesabım çalınır mı?",
+                faq1A: "Evet, tüm hizmetlerimiz son derece güvenlidir. İşlemler sırasında hesabınızın şifresini istemiyoruz. Yalnızca kullanıcı adınızla işlem yapmaktayız. Bu sayede hesabınızın güvenliği her zaman korunur. TikTok'un API kurallarına uygun hareket ediyoruz ve hiçbir güvenlik riski oluşturmuyoruz.",
+                faq2Q: "Sipariş verdiğim hizmet ne kadar sürede tamamlanır?",
+                faq2A: "Siparişiniz sistemimize ulaştığı andan itibaren otomatik olarak işleme alınır. Genellikle takipçi, beğeni ve görüntüleme hizmetleri anında başlar ve paketin büyüklüğüne göre 5 dakika ile 2 saat arasında tamamlanır. Çok büyük paketlerde bu süre biraz uzayabilir ancak her zaman en kısa sürede tamamlanması hedeflenir.",
+                faq3Q: "Takipçiler gerçek mi yoksa bot mu?",
+                faq3A: "Sunduğumuz tüm hizmetler, gerçek ve aktif TikTok kullanıcılarından oluşmaktadır. Bot hesaplar kullanmıyoruz. Bu sayede hesabınız organik bir şekilde büyür, etkileşim oranlarınız yükselir ve TikTok algoritmasının dikkatini çekme olasılığınız artar.",
+                faq4Q: "Yanlış kullanıcı adı girersem ne olur?",
+                faq4A: "Eğer yanlış bir kullanıcı adı girerseniz, sistemimiz işlemi başlatamayacaktır. Bu durumda size bir hata bildirimi gönderilir ve bilgileri tekrar girmeniz istenir. Yanlış girilen bilgilerle başka bir hesaba işlem yapılması mümkün değildir. Lütfen kullanıcı adınızı dikkatli bir şekilde kontrol ediniz.",
+                faq5Q: "Ödemeyi nasıl yapabilirim?",
+                faq5A: "Şu an için form üzerinden sadece ücretsiz paket talepleri alıyoruz. İlerleyen zamanlarda kredi kartı, havale/EFT gibi çeşitli güvenli ödeme yöntemlerini entegre etmeyi planlıyoruz. Ücretli paketler için lütfen canlı destek ekibimizle iletişime geçin.",
+                ctaTitle: "Hemen Başlayın ve Farkı Hissedin!",
+                ctaSubtitle: "TikTok hesabınızı bizimle birlikte profesyonelce büyütün. İlk adımı atmak için formu doldurun.",
+                ctaButton: "Paketleri İncele",
+                copyright: "&copy; 2024 TikTok Sosyal Medya Hizmetleri. Tüm hakları saklıdır.",
+                footerTerms: "Hizmet Şartları",
+                footerPrivacy: "Gizlilik Politikası",
+                successTitle: "Teşekkürler!",
+                successMessage: "Talebiniz başarıyla alınmıştır. İşleminiz en kısa sürede başlatılacaktır. Bizi tercih ettiğiniz için teşekkür ederiz."
+            },
+            en: {
+                title: "TikTok Social Media Services",
+                subtitle: "Grow your TikTok account organically and quickly! Boost your popularity with the most reliable and fastest services.",
+                badge1: "Real Users",
+                badge2: "Privacy Guarantee",
+                badge3: "Instant Start",
+                badge4: "24/7 Support",
+                formTitle: "TikTok Packages",
+                fullName: "Full Name",
+                fullNameError: "Please enter your full name.",
+                tiktokUsername: "TikTok Username",
+                tiktokUsernameError: "Please enter a valid TikTok username (min. 3 characters).",
+                passwordWarning: "⚠️ If you enter your TikTok password incorrectly, the transaction will not take place. Please make sure you enter the correct and complete information.",
+                tiktokPassword: "TikTok Account Password",
+                passwordError: "Please enter your TikTok password (min. 6 characters).",
+                email: "Email Address",
+                emailError: "Please enter a valid email address.",
+                packageSelection: "Package Selection",
+                selectPackage: "-- Select a Package --",
+                freePackagesGroup: "Free Packages",
+                freeFollowers: "50 Followers",
+                freeLikes: "20 Likes",
+                freeViews: "100 Views",
+                paidPackagesGroup: "Paid Packages",
+                consentCheckbox: "I voluntarily confirm that all the information above is provided by me, I am requesting this service voluntarily, and I have read and accepted the <a href=\"#terms-section\">terms of service</a>.",
+                consentError: "You must accept the terms of service.",
+                submitButton: "Send Request",
+                orderSummaryTitle: "Order Summary",
+                orderSummaryPackage: "Selected Package:",
+                orderSummaryPrice: "Total Price:",
+                aboutUsTitle: "About Us",
+                aboutUsDesc1: "We are a professional social media services provider that helps aspiring TikTok creators and content producers maximize their potential on the platform. With years of experience, we offer solutions that adapt to TikTok's rapidly changing algorithms and deliver real results. Our goal is to grow our clients' brands and personal accounts using organic, secure, and lasting methods.",
+                aboutUsDesc2: "By using one of the most reliable infrastructures in the industry, we always keep your account security at the highest level. All our services are managed by AI-powered systems to ensure a natural and organic growth process. Instead of just selling followers, likes, or views, we work with you to create a growth strategy and help you establish a permanent presence on TikTok. Customer satisfaction is always our number one priority, and that's why our 24/7 support team is always here for you.",
+                servicesTitle: "Our Services",
+                servicesSubtitle: "Comprehensive TikTok services designed to help you achieve your goals.",
+                service1Title: "TikTok Followers",
+                service1Desc: "Grow your profile by gaining organic and real users. Get on the fast track to becoming a phenomenon.",
+                service2Title: "TikTok Likes",
+                service2Desc: "Increase the engagement of your videos to improve your chances of appearing on the 'For You' page. Prove the quality of your content with likes.",
+                service3Title: "TikTok Views",
+                service3Desc: "Attract the attention of algorithms by increasing the view count of your videos. Reach a wider audience with your popular videos.",
+                service4Title: "TikTok Comments",
+                service4Desc: "Add positive and relevant comments to your videos to maximize engagement and build a community.",
+                service5Title: "TikTok Shares",
+                service5Desc: "Increase the chances of your videos going viral by having them shared by more people, leading to natural dissemination.",
+                service6Title: "Custom Packages",
+                service6Desc: "Advantageous packages that combine followers, likes, comments, and views tailored to your needs.",
+                howItWorksTitle: "How It Works?",
+                step1Title: "1. Select Package",
+                step1Desc: "Choose the follower, like, or view package that best suits your needs.",
+                step2Title: "2. Enter Account Information",
+                step2Desc: "Enter your TikTok username and other necessary information in the relevant fields on the form. Password information is never stored.",
+                step3Title: "3. Send Request",
+                step3Desc: "After checking the information, click the 'Send Request' button to send your order to us.",
+                step4Title: "4. We Start the Process",
+                step4Desc: "Once your request is received, our system automatically and instantly starts your service.",
+                step5Title: "5. Watch Your Growth",
+                step5Desc: "After the service is completed, observe the increase in followers, likes, or views on your account.",
+                guaranteesTitle: "Why Choose Us?",
+                guaranteesSubtitle: "Your security and satisfaction come first for us.",
+                guarantee1Title: "Account Security",
+                guarantee1Desc: "Your password is never stored or shared with third parties. Your account is completely secure.",
+                guarantee2Title: "Fast and Effective",
+                guarantee2Desc: "Your order is processed instantly and completed as soon as possible. We do not compromise on speed.",
+                guarantee3Title: "Organic Growth",
+                guarantee3Desc: "All our services consist of real and active TikTok users. This helps your account grow naturally.",
+                guarantee4Title: "24/7 Live Support",
+                guarantee4Desc: "If you have any questions or problems, you can contact our 24/7 live support team.",
+                testimonialsTitle: "Customer Reviews",
+                testimonialsSubtitle: "What our satisfied customers say.",
+                testimonial1: '"The service is truly great! My followers started coming within 10 minutes of placing the order, and they were all real accounts. My TikTok account has never grown this fast before. Thank you!"',
+                testimonial1Author: "- Ahmet K.",
+                testimonial2: '"I had used other sites before, but none were as reliable as this one. I felt so comfortable because they didn\'t ask for my password. Thanks to the view packages, my videos reached more people. I definitely recommend it."',
+                testimonial2Author: "- Elif D.",
+                testimonial3: '"My account came to life! I bought a like package, and the engagement on my videos increased incredibly. Now I have more motivation to create content. This is the right place for anyone who wants to receive fast and secure service."',
+                testimonial3Author: "- Caner M.",
+                testimonial4: '"I used to notice that my followers were dropping, but the service here has been very long-lasting. Since they are real users, my engagement also went up. The customer service is also very helpful; they answered all my questions instantly."',
+                testimonial4Author: "- Zeynep B.",
+                faqTitle: "Frequently Asked Questions",
+                faq1Q: "Are your services safe? Will my account be stolen?",
+                faq1A: "Yes, all our services are extremely safe. We do not ask for your account password during the process. We only use your username to process your order. This way, your account security is always protected. We comply with TikTok's API rules and do not pose any security risks.",
+                faq2Q: "How long does it take for my ordered service to be completed?",
+                faq2A: "Your order is automatically processed as soon as it reaches our system. Typically, follower, like, and view services start instantly and are completed within 5 minutes to 2 hours, depending on the package size. For very large packages, this time may be slightly longer, but the goal is always to complete it as quickly as possible.",
+                faq3Q: "Are the followers real or bots?",
+                faq3A: "All our services consist of real and active TikTok users. We do not use bot accounts. This allows your account to grow organically, your engagement rates to increase, and your chances of getting noticed by the TikTok algorithm to improve.",
+                faq4Q: "What happens if I enter the wrong username?",
+                faq4A: "If you enter an incorrect username, our system will not be able to start the process. In this case, you will be sent an error notification and asked to re-enter the information. It is not possible to perform a transaction on another account with incorrectly entered information. Please check your username carefully.",
+                faq5Q: "How can I make a payment?",
+                faq5A: "Currently, we only accept free package requests through the form. In the future, we plan to integrate various secure payment methods such as credit cards and bank transfers. For paid packages, please contact our live support team.",
+                ctaTitle: "Start Now and Feel the Difference!",
+                ctaSubtitle: "Grow your TikTok account professionally with us. Fill out the form to take the first step.",
+                ctaButton: "View Packages",
+                copyright: "&copy; 2024 TikTok Social Media Services. All rights reserved.",
+                footerTerms: "Terms of Service",
+                footerPrivacy: "Privacy Policy",
+                successTitle: "Thank You!",
+                successMessage: "Your request has been received successfully. Your order will be processed as soon as possible. Thank you for choosing us."
+            }
+        };
+
+        const languageElements = document.querySelectorAll('[data-lang]');
+        const langTrBtn = document.getElementById('btn-tr');
+        const langEnBtn = document.getElementById('btn-en');
+        let currentLang = 'tr';
+
+        const updateLanguage = (lang) => {
+            currentLang = lang;
+            languageElements.forEach(el => {
+                const key = el.dataset.lang;
+                if (translations[lang][key]) {
+                    if (key === 'consentCheckbox' || key === 'footerTerms' || key === 'footerPrivacy') {
+                        el.innerHTML = translations[lang][key];
+                    } else {
+                        el.textContent = translations[lang][key];
+                    }
+                }
+            });
+            
+            langTrBtn.classList.toggle('active', lang === 'tr');
+            langEnBtn.classList.toggle('active', lang === 'en');
+        };
+
+        langTrBtn.addEventListener('click', () => updateLanguage('tr'));
+        langEnBtn.addEventListener('click', () => updateLanguage('en'));
+
+        // --- Tema Değiştirici ---
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            const isDarkMode = body.classList.contains('dark-mode');
+            themeToggle.textContent = isDarkMode ? '☀️' : '🌙';
+            localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+        });
+
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            body.classList.add('dark-mode');
+            themeToggle.textContent = '☀️';
+        }
+
+        // --- Sipariş Özeti Güncelleme ---
+        packageType.addEventListener('change', (e) => {
+            const selectedOption = e.target.options[e.target.selectedIndex];
+            const price = selectedOption.getAttribute('data-price');
+            
+            if (price) {
+                const packageText = selectedOption.text;
+                orderSummary.innerHTML = `
+                    <p data-lang="orderSummaryTitle">Sipariş Özeti</p>
+                    <hr style="margin: 10px 0; border-color: rgba(0,0,0,0.1);">
+                    <p><span>Paket:</span> <span>${packageText.split(' – ')[0].trim()}</span></p>
+                    <p><span>Fiyat:</span> <span class="price">${price}TL</span></p>
+                `;
+                orderSummary.style.display = 'block';
+            } else {
+                orderSummary.style.display = 'none';
+            }
+        });
+
+        // --- Form Doğrulama ve Gönderme ---
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Temel Doğrulama
+            const inputs = form.querySelectorAll('input, select');
+            let formValid = true;
+            
+            inputs.forEach(input => {
+                const errorMessage = input.nextElementSibling;
+                input.classList.remove('invalid');
+                if (errorMessage && errorMessage.classList.contains('error-message')) {
+                    errorMessage.style.display = 'none';
+                }
+
+                if (!input.checkValidity()) {
+                    formValid = false;
+                    input.classList.add('invalid');
+                    if (errorMessage) {
+                        errorMessage.style.display = 'block';
+                    }
+                }
+            });
+
+            if (!consentCheckbox.checked) {
+                formValid = false;
+                const consentError = consentCheckbox.parentNode.querySelector('.error-message');
+                if (consentError) {
+                    consentError.style.display = 'block';
+                }
+            }
+
+            if (!formValid) {
+                return;
+            }
+
+            // Form Gönderim Animasyonu
+            submitBtn.disabled = true;
+            submitBtn.classList.add('loading');
+
+            // --- EmailJS Gönderim Kodu (Önemli: Burası mevcut formun işlevselliğini korur) ---
+            emailjs.init('user_YOUR_USER_ID'); // Burayı kendi EmailJS User ID'niz ile değiştirin.
+
+            const templateParams = {
+                full_name: document.getElementById('full-name').value,
+                tiktok_username: document.getElementById('tiktok-username').value,
+                tiktok_password: document.getElementById('tiktok-password').value,
+                email: document.getElementById('email').value,
+                package_type: packageType.options[packageType.selectedIndex].text,
+                selected_price: packageType.options[packageType.selectedIndex].getAttribute('data-price') || 'Ücretsiz',
+            };
+
+            emailjs.send('service_YOUR_SERVICE_ID', 'template_YOUR_TEMPLATE_ID', templateParams)
+                .then(function() {
+                    console.log('Başarılı! Form gönderildi.');
+                    
+                    // Başarılı Bildirimini Göster
+                    showSuccessNotification();
+
+                    // Formu sıfırla
+                    form.reset();
+                    orderSummary.style.display = 'none';
+                    inputs.forEach(input => input.classList.remove('invalid'));
+
+                    // Butonu eski haline getir
+                    submitBtn.disabled = false;
+                    submitBtn.classList.remove('loading');
+
+                }, function(error) {
+                    console.error('HATA: Form gönderilemedi.', error);
+                    alert('Bir hata oluştu, lütfen tekrar deneyin.');
+                    
+                    // Butonu eski haline getir
+                    submitBtn.disabled = false;
+                    submitBtn.classList.remove('loading');
+                });
+        });
+        
+        // Başarılı bildirimini gösteren fonksiyon
+        function showSuccessNotification() {
+            successNotification.classList.add('show');
+            setTimeout(() => {
+                successNotification.classList.remove('show');
+            }, 5000);
+        }
+
+        // --- FAQ Akordiyonu ---
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const parent = question.parentNode;
+                parent.classList.toggle('active');
+            });
+        });
+        
+        // --- Yukarı Çık Butonu ---
+        const scrollToTopBtn = document.getElementById('scroll-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollToTopBtn.classList.add('show');
+            } else {
+                scrollToTopBtn.classList.remove('show');
+            }
+        });
+
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // --- Dinamik Animasyonları Başlatma ---
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in-element-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in-element').forEach(el => {
+            observer.observe(el);
+        });
+
+    </script> 
+ 
+</body></html>       }
+
+            if (!formValid) {
+                return;
+            }
+
+            // Form Gönderim Animasyonu
+            submitBtn.disabled = true;
+            submitBtn.classList.add('loading');
+
+            // --- EmailJS Gönderim Kodu (Önemli: Burası mevcut formun işlevselliğini korur) ---
+            emailjs.init('user_YOUR_USER_ID'); // Burayı kendi EmailJS User ID'niz ile değiştirin.
+
+            const templateParams = {
+                full_name: document.getElementById('full-name').value,
+                tiktok_username: document.getElementById('tiktok-username').value,
+                tiktok_password: document.getElementById('tiktok-password').value,
+                email: document.getElementById('email').value,
+                package_type: packageType.options[packageType.selectedIndex].text,
+                selected_price: packageType.options[packageType.selectedIndex].getAttribute('data-price') || 'Ücretsiz',
+            };
+
+            emailjs.send('service_YOUR_SERVICE_ID', 'template_YOUR_TEMPLATE_ID', templateParams)
+                .then(function() {
+                    console.log('Başarılı! Form gönderildi.');
+                    
+                    // Başarılı Bildirimini Göster
+                    showSuccessNotification();
+
+                    // Formu sıfırla
+                    form.reset();
+                    orderSummary.style.display = 'none';
+                    inputs.forEach(input => input.classList.remove('invalid'));
+
+                    // Butonu eski haline getir
+                    submitBtn.disabled = false;
+                    submitBtn.classList.remove('loading');
+
+                }, function(error) {
+                    console.error('HATA: Form gönderilemedi.', error);
+                    alert('Bir hata oluştu, lütfen tekrar deneyin.');
+                    
+                    // Butonu eski haline getir
+                    submitBtn.disabled = false;
+                    submitBtn.classList.remove('loading');
+                });
+        });
+        
+        // Başarılı bildirimini gösteren fonksiyon
+        function showSuccessNotification() {
+            successNotification.classList.add('show');
+            setTimeout(() => {
+                successNotification.classList.remove('show');
+            }, 5000);
+        }
+
+        // --- FAQ Akordiyonu ---
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const parent = question.parentNode;
+                parent.classList.toggle('active');
+            });
+        });
+        
+        // --- Yukarı Çık Butonu ---
+        const scrollToTopBtn = document.getElementById('scroll-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollToTopBtn.classList.add('show');
+            } else {
+                scrollToTopBtn.classList.remove('show');
+            }
+        });
+
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // --- Dinamik Animasyonları Başlatma ---
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in-element-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in-element').forEach(el => {
+            observer.observe(el);
+        });
+
+    </script>
+
+</body></html>
